@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Seyahat Planlayıcı</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .animate-fade-in {
+        animation: fadeIn 0.6s ease-out forwards;
+      }
+      @keyframes spin-slow {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+      .animate-spin-slow { animation: spin-slow 25s linear infinite; }
+
+      @keyframes drift {
+        0% { transform: translateX(-2px); }
+        50% { transform: translateX(2px); }
+        100% { transform: translateX(-2px); }
+      }
+      .animate-drift { animation: drift 5s ease-in-out infinite; }
+      
+      @keyframes flash {
+        0%, 50%, 100% { opacity: 1; }
+        51%, 53% { opacity: 0.4; }
+      }
+      .animate-flash { animation: flash 3s linear infinite; }
+      
+      @keyframes sun-shine-ray {
+        0% { transform: scale(0.8); opacity: 0.8; }
+        50% { transform: scale(1.05); opacity: 1; }
+        100% { transform: scale(0.8); opacity: 0.8; }
+      }
+      @keyframes rain-fall {
+        0% { transform: translateY(-10px); opacity: 0; }
+        50% { opacity: 1; }
+        100% { transform: translateY(20px); opacity: 0; }
+      }
+      @keyframes snow-fall {
+        0% { transform: translateY(-10px) translateX(0px) rotate(0deg); opacity: 0; }
+        50% { opacity: 1; }
+        100% { transform: translateY(20px) translateX(5px) rotate(90deg); opacity: 0; }
+      }
+      @keyframes fog-flow {
+        0% { transform: translateX(-15px); opacity: 0.3; }
+        50% { transform: translateX(15px); opacity: 0.8; }
+        100% { transform: translateX(-15px); opacity: 0.3; }
+      }
+
+      @keyframes fade-in-backdrop {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+      .animate-fade-in-backdrop { animation: fade-in-backdrop 0.3s ease-out forwards; }
+
+      @keyframes slide-up-fade-in {
+        from { opacity: 0; transform: translateY(30px) scale(0.98); }
+        to { opacity: 1; transform: translateY(0) scale(1); }
+      }
+      .animate-slide-up-fade-in { animation: slide-up-fade-in 0.4s ease-out forwards; }
+
+      @keyframes drawRoute {
+        to {
+          stroke-dashoffset: 0;
+        }
+      }
+
+      @keyframes pulseHighlight {
+        0% { transform: scale(1); opacity: 0.7; }
+        50% { transform: scale(1.5); opacity: 0.3; }
+        100% { transform: scale(1); opacity: 0.7; }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

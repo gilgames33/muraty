@@ -1,0 +1,5 @@
+{
+  "name": "Seyahat Planlayıcı",
+  "description": "Yapay zeka destekli seyahat planlayıcısı. Gideceğiniz yeri, tarihi ve ulaşım şeklini seçin; size özel gezi rehberi, yeme-içme önerileri ve hava durumu tahminleri sunalım.",
+  "requestFramePermissions": []
+}
